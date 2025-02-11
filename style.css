@@ -1,40 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
-body {
-    font-family: 'Orbitron', sans-serif;
-    background-color: black;
-    color: #00ff99;
-    text-align: center;
-    padding: 20px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    overflow-y: auto;
-}
-
-/* Conteneur principal */
-.container {
-    max-width: 90%;
-    width: 400px;
-    padding: 20px;
-    border-radius: 15px;
-    background: rgba(0, 0, 0, 0.9);
-    border: 1px solid #00ff99;
-    box-shadow: 0px 0px 15px rgba(0, 255, 153, 0.5);
-}
-
-/* Titre */
-.title {
-    font-size: 22px;
-    color: #00ff99;
-    text-transform: uppercase;
-}
-
-/* Profil */
-.profile {
-    margin-top: 15px;
+#passwordSection {
+    margin-top: 20px;
     padding: 15px;
     border-radius: 10px;
     background: rgba(0, 255, 153, 0.1);
@@ -42,47 +7,26 @@ body {
     box-shadow: inset 0px 0px 5px rgba(0, 255, 153, 0.5);
 }
 
-/* Boutons */
-.options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.options a {
-    display: block;
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
     width: 80%;
-    padding: 12px;
-    margin: 8px 0;
-    border-radius: 10px;
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00ff99;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
-    text-decoration: none;
-    transition: 0.3s;
-    text-transform: uppercase;
 }
 
-/* Cyberpunk */
-.cyberpunk {
-    background: #ff6600;
-    color: black;
-    border: 2px solid #ff6600;
-    box-shadow: 0px 0px 8px rgba(255, 102, 0, 0.8);
-}
-
-.cyberpunk:hover {
-    background: #ff3300;
-}
-
-/* Technohippie */
-.technohippie {
-    background: #00ff99;
-    color: black;
-    border: 2px solid #00ff99;
-    box-shadow: 0px 0px 8px rgba(0, 255, 153, 0.8);
-}
-
-.technohippie:hover {
-    background: #00cc66;
+button:hover {
+    background-color: #00cc66;
 }
