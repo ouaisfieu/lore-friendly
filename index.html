@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenue, Enfant du 27 Mars</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function checkPassword() {
+            var answer = document.getElementById("passwordInput").value.trim().toLowerCase();
+            if (answer === "oréo") {
+                document.getElementById("passwordSection").style.display = "none";
+                document.getElementById("optionsSection").style.display = "block";
+            } else {
+                alert("Mauvaise réponse. Essaye encore !");
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -20,11 +31,17 @@
             <p><strong>Numérologie :</strong> 9 (Initiation, transformation)</p>
         </section>
 
-        <section class="choice">
-            <h2>Choisis ta voie</h2>
+        <!-- Section de validation -->
+        <section id="passwordSection">
+            <h2>🔑 Validation</h2>
+            <p>Le nom de ton animal de compagnie :</p>
+            <input type="text" id="passwordInput" placeholder="Entrez votre réponse">
+            <button onclick="checkPassword()">Valider</button>
+        </section>
 
-                <p><strong>/!\Sur odri c'est mieux /!\</strong> 
-            
+        <!-- Options cachées avant validation -->
+        <section id="optionsSection" class="choice" style="display: none;">
+            <h2>🛤️ Choisis ta voie</h2>
             <div class="options">
                 <a href="https://publish.obsidian.md/ouaisfieu/ACCUEIL/Bienvenue+-+Le+Retour+de+l'Empire" class="cyberpunk">🔥 Cyberpunk</a>
                 <a href="https://publish.obsidian.md/ouaisfieu/ACCUEIL/Bienvenue" class="technohippie">🌿 Technohippie</a>
