@@ -1,55 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     background-color: black;
-    color: white;
+    color: #00ff99;
     text-align: center;
     padding: 20px;
+    margin: 0;
+    overflow: hidden;
 }
 
+/* 🌌 Effet de fond mystérieux (Pluie de code façon Matrix) */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif') center/cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* 🟢 Conteneur principal avec coins arrondis */
 .container {
     max-width: 600px;
     margin: auto;
-    padding: 20px;
-    border: 2px solid white;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 20px;
     background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ff99;
+    box-shadow: 0px 0px 20px rgba(0, 255, 153, 0.5);
 }
 
-h1 {
+/* ✨ Effet glitch pour le titre */
+.glitch {
     font-size: 24px;
-    color: #ff4500;
+    position: relative;
+    text-transform: uppercase;
+    color: #00ff99;
+    animation: glitch 1.5s infinite alternate;
 }
 
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 5px rgba(0, 255, 153, 0.8); }
+    50% { text-shadow: -2px -2px 5px rgba(0, 255, 153, 0.8); }
+    100% { text-shadow: 2px 2px 5px rgba(0, 255, 153, 0.8); }
+}
+
+/* 🔮 Profil ésotérique */
 .profile {
     margin-top: 20px;
     padding: 15px;
-    border: 1px solid white;
-    border-radius: 5px;
+    border-radius: 15px;
+    background: rgba(0, 255, 153, 0.1);
+    border: 1px solid #00ff99;
+    box-shadow: inset 0px 0px 10px rgba(0, 255, 153, 0.5);
 }
 
+/* 🛤️ Section des choix */
 .choice {
     margin-top: 20px;
 }
 
+/* 🎭 Styles des boutons */
 .options a {
     display: inline-block;
     margin: 10px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 25px;
     font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    text-transform: uppercase;
 }
 
+/* 🔥 Bouton Cyberpunk */
 .cyberpunk {
-    background: linear-gradient(45deg, #ff0000, #ff4500);
+    background: linear-gradient(45deg, #ff0000, #ff6600);
     color: black;
+    border: 2px solid #ff6600;
+    box-shadow: 0px 0px 10px rgba(255, 102, 0, 0.8);
 }
 
+.cyberpunk:hover {
+    background: #ff6600;
+    box-shadow: 0px 0px 20px rgba(255, 102, 0, 1);
+}
+
+/* 🌿 Bouton Technohippie */
 .technohippie {
-    background: linear-gradient(45deg, #00ff00, #008000);
+    background: linear-gradient(45deg, #00ff99, #008060);
     color: black;
+    border: 2px solid #00ff99;
+    box-shadow: 0px 0px 10px rgba(0, 255, 153, 0.8);
 }
 
-.options a:hover {
-    opacity: 0.8;
+.technohippie:hover {
+    background: #00ff99;
+    box-shadow: 0px 0px 20px rgba(0, 255, 153, 1);
+}
+
+/* ✨ Animation subtile pour donner un effet vivant */
+@keyframes pulse {
+    0% { box-shadow: 0px 0px 10px rgba(0, 255, 153, 0.5); }
+    50% { box-shadow: 0px 0px 20px rgba(0, 255, 153, 1); }
+    100% { box-shadow: 0px 0px 10px rgba(0, 255, 153, 0.5); }
+}
+
+.cyberpunk:hover, .technohippie:hover {
+    animation: pulse 1.5s infinite alternate;
 }
